@@ -8,7 +8,7 @@ public class Car implements Vehicle {
     }
 
     @Override
-    public double calculateMileage() {
+    public double calculateFuel() {
         return mileage;
     }
 }

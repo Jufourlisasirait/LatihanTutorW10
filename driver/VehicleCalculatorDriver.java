@@ -26,20 +26,20 @@ public class VehicleCalculatorDriver {
                 shapeType = ShapeType.BIKE;
                 break;
             default:
-                System.out.println("Pilihan tidak valid!");
+                System.out.println("Invalid Choice!");
                 break;
         }
 
         if (shapeType == ShapeType.CAR) {
-            System.out.println("Mobil memiliki rata-rata konsumsi bahan bakar " + calculateMileage(car) + " mil per galon");
+            System.out.println("The car has an average fuel consumption of " + calculateFuel(car) + " miles per gallon");
         } else if (shapeType == ShapeType.BIKE) {
-            System.out.println("Sepeda motor memiliki rata-rata konsumsi bahan bakar " + calculateMileage(bike) + " mil per galon");
+            System.out.println("Moto bikes have an average fuel consumption of " + calculateFuel(bike) + " miles per gallon");
         }
 
         scanner.close();
     }
 
-    private static double calculateMileage(Vehicle vehicle) {
-        return vehicle.calculateMileage();
+    private static double calculateFuel(Vehicle vehicle) {
+        return vehicle.calculateFuel();
     }
 }
